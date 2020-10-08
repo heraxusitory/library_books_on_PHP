@@ -2,6 +2,7 @@
 // Подключаем классы
 require_once($_SERVER['DOCUMENT_ROOT'] . '/app/DB.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/app/Books.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/app/Users.php');
 // Юзаем НЭЙМСПЭЙС
 use App\DB;
 
