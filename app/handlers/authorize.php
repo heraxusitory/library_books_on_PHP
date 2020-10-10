@@ -18,6 +18,9 @@ if (!empty($_REQUEST)) {
 				$foundUser = true;
 				$arResponse['status'] = 'ok';
 				$arResponse['message'] = 'Success';
+				// TODO: сделать пометку в сесси, что пользователь авторизован
+				// сессия пользователя должна выглядеть таким образом session:{user:{auth: true, user_id: <user_id>}
+				// т.е. грубо говоря в массиве сессии должен быть массив с ключем user, в котором должно быть поле auth и user_id
 			}
 		} 
 		
