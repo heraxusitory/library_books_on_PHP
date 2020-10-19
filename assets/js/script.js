@@ -32,17 +32,12 @@ $(document).ready(function() {
 					if(messageBox.hasClass('alert-success')) {
 						messageBox.removeClass('alert-success');
 					}
+					messageBox.text(data.message);
+					messageBox.show();
 				}
 				if (data.status == 'ok') {
-					if(!(messageBox.hasClass('alert-success'))) {
-						messageBox.addClass('alert-success');
-					}
-					if(messageBox.hasClass('alert-danger')) {
-						messageBox.removeClass('alert-danger');
-					}
+					location.reload();
 				}
-				messageBox.text(data.message);
-				messageBox.show();
 			},
 			// 5) Коллбэк-функция в случае если произошли ошибки при 
 			// попытке отправить запрос (неверный урл, неправильно собран запрос итд)

@@ -29,7 +29,6 @@ class DB {
         } else {
             return false;
         }
-
         return $arrList;
     }
 

@@ -1,7 +1,6 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/app/config.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +23,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
                 <li class="nav-item"><a class="nav-link custom-link" href="/">Books</a></li>
                 <li class="nav-item"><a class="nav-link custom-link" href="#">Authors</a></li>
                 <li class="nav-item"><a class="nav-link custom-link" href="#">Genre</a></li>
-                <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign in</a></li>
+                <?php if (user()->isAuth()):?>
+                    <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign out</a></li>
+                <?php else:?>
+                     <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign in</a></li>
+                <?php endif;?>
             </ul>
         </div>
     </header>
