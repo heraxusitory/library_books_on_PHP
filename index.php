@@ -15,6 +15,9 @@ $b = new Books();
                 case 'auth':
                     include($_SERVER['DOCUMENT_ROOT'] . '/app/routes/auth.php');
                     break;
+                case 'profile':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/profile.php');
+                    break;
                 default:
                     include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
                     break;

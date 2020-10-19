@@ -19,6 +19,7 @@ if (!empty($_REQUEST)) {
 				if ($_REQUEST['login'] == $user['login'] && $_REQUEST['password'] == $user['password']) {
 					$foundUser = true;
 					$arResponse['status'] = 'ok';
+					$arResponse['action'] = 'in';
 					$_SESSION['user'] = [
 						'auth' => true,
 						'user_id' => $user['id'],
@@ -42,6 +43,7 @@ if (!empty($_REQUEST)) {
 
 		unset($_SESSION['user']);
 		$arResponse['status'] = 'ok';
+		$arResponse['action'] = 'out';
 	}
 	
 

@@ -39,3 +39,11 @@ a.custom-link:hover {
     color: white;
     text-decoration: underline;
 }
+
+.profile .field_name {
+    font-size: 25px;
+}
+
+.profile .field_mail {
+    font-size: 18px;
+}

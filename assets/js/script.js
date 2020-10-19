@@ -36,7 +36,12 @@ $(document).ready(function() {
 					messageBox.show();
 				}
 				if (data.status == 'ok') {
-					location.reload();
+					if (data.action === 'in') {
+						$(location).attr('href', '?profile=yes');
+					} 
+					if (data.action === 'out') {
+						location.reload();
+					}	
 				}
 			},
 			// 5) Коллбэк-функция в случае если произошли ошибки при 
