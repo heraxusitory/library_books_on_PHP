@@ -21,10 +21,10 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
             <h1 class="header-title">Library Books</h1>
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link custom-link" href="/">Books</a></li>
-                <li class="nav-item"><a class="nav-link custom-link" href="#">Authors</a></li>
+                <li class="nav-item"><a class="nav-link custom-link" href="?authors=show">Authors</a></li>
                 <li class="nav-item"><a class="nav-link custom-link" href="#">Genre</a></li>
                 <?php if (user()->isAuth()):?>
-                    <li class="nav-item"><a class="nav-link custom-link" href="?profile=yes">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link" href="?profile=show">Profile</a></li>
                     <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign out</a></li>
                 <?php else:?>
                      <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign in</a></li>

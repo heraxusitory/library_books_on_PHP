@@ -1,7 +1,6 @@
 <?php 
 require($_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); 
 use App\Books;
-
 $b = new Books();
 
 ?>
@@ -17,6 +16,9 @@ $b = new Books();
                     break;
                 case 'profile':
                     include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/profile.php');
+                    break;
+                case 'authors':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/authors.php');
                     break;
                 default:
                     include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
