@@ -1,0 +1,3 @@
+# auth() in function.php
+# show bookList in author detail page
+# users must can add books in favorites (display added books in profile)
