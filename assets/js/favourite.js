@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
 	// Получаем форму и записываем ее в переменную
-	let formFavourite = $('form_favourite');
+	let formAddToFavourite = $('.form_favourite_add');
+	let formRemoveToFavourite = $('.form_favourite_remove');
 
 	// Вешаем на форму обработчик события
-	formFavourite.submit(function(evt) {
+	formAddToFavourite.submit(function(evt) {
 		evt.preventDefault();
 		// получаю текущую форму и записываю ее в переменную
 		let form = $(this);
