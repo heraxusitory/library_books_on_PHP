@@ -18,7 +18,9 @@ body {
 background-color: #fff;
 min-height: 85vh;
 }
-
+.content_title {
+    text-align: center;
+}
 .custom-container {
 background-color: rgb(240,240,240);
 min-height: 70vh;
