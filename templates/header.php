@@ -11,6 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <link href="/assets/css/singin.css" rel="stylesheet">
      <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+     <link href="/assets/css/bootstrap-tools.css" rel="stylesheet" type="text/css">
 
      <!-- Подрубаем jquery -->
      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

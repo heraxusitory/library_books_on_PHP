@@ -1,3 +1,8 @@
+--Complete--
 # auth() in function.php
 # show bookList in author detail page
 # users must can add books in favorites (display added books in profile)
+
+--New--
+# TODO - указать правильный жанр (/app/routes/genres/genre_books.php:11)
+# TODO - указать правильного автора (/app/routes/authors/author_books.php:11)
