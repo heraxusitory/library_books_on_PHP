@@ -18,7 +18,9 @@ class Books extends DB {
         LEFT JOIN authors ON author_id = authors.id 
         LEFT JOIN genre ON genre_id = genre.id';
 
-    private $getById = 'WHERE book_id = ';
+    private $getByBook_Id = 'WHERE book_id = ';
+    private $getByAuthor_Id = 'WHERE author_id = ';
+    private $getByGenre_Id = 'WHERE genre_id = ';
 
     public function getBooks() {
         // Тут через $this идет обращение к методу родительского класса
@@ -27,8 +29,22 @@ class Books extends DB {
     }
 
     public function getBookById($id) {
-        $arrList = $this->get($this->selectAll . " " . $this->getListQuery . " " . $this->getById . $id);
+        $arrList = $this->get($this->selectAll . " " . $this->getListQuery . " " . $this->getByBook_Id . $id);
+        return $arrList;
+    }
+    public function getBooksById($id) {
+        $arrList = $this->getList($this->selectAll . " " . $this->getListQuery . " " . $this->getByAuthor_Id . $id);
         return $arrList;
     }
 
+     public function getGenreById($id) {
+        $arrList = $this->getList($this->selectAll . " " . $this->getListQuery . " " . $this->getByGenre_Id . $id);
+        return $arrList;
+    }
+
+    public function getIdOfBooks() {
+        $arrList = $this->getList('
+            SELECT id FROM books');
+        return $arrList;
+    }
 }

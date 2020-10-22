@@ -22,8 +22,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link custom-link" href="/">Books</a></li>
                 <li class="nav-item"><a class="nav-link custom-link" href="?authors=show">Authors</a></li>
-                <li class="nav-item"><a class="nav-link custom-link" href="#">Genre</a></li>
-                <?php if (user()->isAuth()):?>
+                <li class="nav-item"><a class="nav-link custom-link" href="?genres=show">Genre</a></li>
+                <?php if (isAuth()):?>
                     <li class="nav-item"><a class="nav-link custom-link" href="?profile=show">Profile</a></li>
                     <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign out</a></li>
                 <?php else:?>

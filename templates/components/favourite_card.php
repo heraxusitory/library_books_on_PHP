@@ -6,6 +6,6 @@
             <div> <?= $book['author_name']; ?> </div>
         </p>
         <a href="/?book=<?= $book['book_id'] ?>" class="btn btn-primary">Show</a>
-        <a href="#" class="btn btn-primary">Добавить в избранное</a>
+        <a href="#" class="btn btn-primary">Убрать из избранного</a>
     </div>
 </div>

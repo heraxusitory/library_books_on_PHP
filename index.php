@@ -1,24 +1,33 @@
 <?php 
 require($_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); 
-use App\Books;
-$b = new Books();
-
 ?>
     <div class="container custom-container">
         <?php
         if (!empty($_GET)):
             switch (key($_GET)) {
                 case 'book':
-                    include($_SERVER['DOCUMENT_ROOT'] . '/app/routes/book.php');
+                    include($_SERVER['DOCUMENT_ROOT'] . '/app/routes/general_menu/book.php');
                     break;
                 case 'auth':
                     include($_SERVER['DOCUMENT_ROOT'] . '/app/routes/auth.php');
                     break;
                 case 'profile':
-                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/profile.php');
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/profile/profile.php');
+                    break;
+                case 'favourites':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/profile/favourites.php');
                     break;
                 case 'authors':
-                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/authors.php');
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/authors/authors.php');
+                    break;
+                case 'author':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/authors/author_books.php');
+                    break;
+                case 'genres':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/genres/genres.php');
+                    break;
+                case 'genre':
+                    include($_SERVER["DOCUMENT_ROOT"] . '/app/routes/genres/genre_books.php');
                     break;
                 default:
                     include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
@@ -26,15 +35,7 @@ $b = new Books();
             }
         ?>
         <?php else: ?>
-            <?php
-
-            $books = $b->getBooks();
-            ?>
-            <div class="d-flex flex-wrap justify-content-between">
-                <?php  foreach($books as $book): ?>
-                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/templates/components/book_card.php'); ?>
-                <?php endforeach; ?>
-            </div>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/app/routes/general_menu/general_menu.php'); ?>
         <?php endif ?> 
     </div>
 

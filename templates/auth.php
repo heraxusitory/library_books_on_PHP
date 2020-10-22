@@ -1,7 +1,7 @@
 <div class="text-center">
     <form class="form-signin" method="POST" action="/app/handlers/authorize.php" id="form_auth">
         <h1 class="block-logo">LB</h1>
-        <?php if (user()->isAuth()):?>
+        <?php if (isAuth()):?>
             <?php
                 $btn = 'Sign out'; 
             ?>
