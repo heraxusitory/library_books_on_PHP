@@ -47,6 +47,14 @@ class DB {
         return $arrData;  
     }
 
+    public function pushData($prepareStr) {
+        // Ключевое слово $this означает обращение к методу или переменной данного(DB) класса, или родительского класса
+        $connection = $this->connect(DB_NAME, DB_USER, DB_PASSWORD);
+        $statement = $connection->prepare($prepareStr);
+        $result = $statement->execute($data);
+        var_dump($result);
+    }
+
 }
 
 ?>
