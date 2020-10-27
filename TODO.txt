@@ -3,9 +3,13 @@
 # show bookList in author detail page
 # users must can add books in favorites (display added books in profile)
 
---New--
+
+
+--Completed by Vlad--
 # TODO - указать правильный жанр (/app/routes/genres/genre_books.php:11)
 # TODO - указать правильного автора (/app/routes/authors/author_books.php:11)
+
+--New for Vlad--
 # Добавление в избранное:
     # 1 - отправка AJAX'ом
     # 2 - На сервере (обработчик) сделать несколько проверок (
