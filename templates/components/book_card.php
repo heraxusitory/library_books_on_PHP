@@ -6,6 +6,11 @@
             <div> <?= $book['author_name']; ?> </div>
         </p>
         <a href="/?book=<?= $book['book_id'] ?>" class="btn btn-primary">Show</a>
-        <a href="#" class="btn btn-primary">Добавить в избранное</a>
+        <form method="POST" action="app/handlers/handler.php" class="form_favourite_add">
+        	 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
+             <input type="hidden" name="action" value="add">
+        	 <button class="btn btn-primary add-favourite">Добавить в избранное</button>
+        </form>
+       
     </div>
 </div>
