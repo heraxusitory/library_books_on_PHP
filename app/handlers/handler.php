@@ -19,7 +19,6 @@ if (!empty($_REQUEST)) {
 				$errorAdd = false;
 				for ($i=0; $i <count($arrFavBooks) ; $i++) { 
 					if ($arrFavBooks[$i]['book_id'] == $_REQUEST['book_id']) {
-			
 						$errorAdd = true;
 						$arResponse['errorAdd'] = $errorAdd;
 						break;

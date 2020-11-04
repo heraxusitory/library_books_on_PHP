@@ -10,7 +10,9 @@
         	 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
              <input type="hidden" name="action" value="add">
         	 <button class="btn btn-primary add-favourite">Добавить в избранное</button>
+             <div class="errorAdd"></div>
         </form>
+
        
     </div>
 </div>

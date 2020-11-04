@@ -3,12 +3,15 @@ $(document).ready(function() {
 	// Получаем форму и записываем ее в переменную
 	let formAddToFavourite = $('.form_favourite_add');
 	let formRemoveFromFavourite = $('.form_favourite_remove');
-	let actionInput = $("input[name='action']");
-	let button = $(".add-favourite");
+	// let actionInput = $("input[name='action']");
+	// let button = $(".add-favourite");
 	// Вешаем на форму обработчик события
 	formAddToFavourite.submit(function() {
 		// получаю текущую форму и записываю ее в переменную
 		let form = $(this);
+		let button = form.find('.add-favourite');
+		let actionInput = form.find("input[name='action']");
+		let errorAdd = form.find('.errorAdd');
 		/*
 		Ключевое слово this тут используется как указатель на DOM - элемент,
 		 с которым производилось какое то действие, тк мы находимся в обработчике событий - 
@@ -32,6 +35,9 @@ $(document).ready(function() {
 						form.addClass('form_favourite_remove');
 						actionInput.val(data.removeAction);
 						button.text(data.text);
+						if (data.errorAdd) {
+							errorAdd.text('Уже добавлено');
+						}
 						console.log('Успешно добавлено!');
 					}
 				}
@@ -42,15 +48,11 @@ $(document).ready(function() {
 						form.addClass('form_favourite_add');
 						actionInput.val(data.removeAction);
 						button.text(data.text);
+						errorAdd.text('');
 						console.log('Успешно удалено!');
-					}
+					} 
 					
 				}
-
-				// 	messageBox.text(data.message);
-				// 	messageBox.show();
-				// }
-				
 			},
 			// 5) Коллбэк-функция в случае если произошли ошибки при 
 			// попытке отправить запрос (неверный урл, неправильно собран запрос итд)
