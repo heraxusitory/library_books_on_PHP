@@ -1,5 +1,5 @@
 <?php 
-require($_SERVER['DOCUMENT_ROOT'] . '/templates/header.php'); 
+require($_SERVER['DOCUMENT_ROOT'] . '/templates/header.php');
 ?>
     <div class="container custom-container">
         <?php 
