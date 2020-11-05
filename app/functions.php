@@ -1,6 +1,7 @@
 <?php
 
 use App\Users;
+use App\Favourites;
 
 function isAuth() {
 	$user = new Users;
@@ -56,4 +57,16 @@ function checkExistBook($idOfBook) {
 		} 
 	}
 return $isExist;
+}
+
+
+function doesExistFavourite($book_id, $user_id) {
+	$favourite = new Favourites;
+	$itFavourite = $favourite->doesTheBookExistInFavourite($book_id, $user_id);
+	return $itFavourite;
+}
+
+function dropFavourBook($bookId) {
+	$favourite = new Favourites;
+	$favourite->dropFavourBook($bookId);
 }
