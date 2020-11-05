@@ -49,3 +49,15 @@ a.custom-link:hover {
 .profile .field_mail {
     font-size: 18px;
 }
+
+.btn_clc {
+    display: flex;
+    justify-content:space-between;
+}
+
+.fatal-error-favourite {
+    background-color: red;
+    margin-top:10px;
+    color:white;
+    text-align: center;
+}
