@@ -9,6 +9,7 @@ function isAuth() {
 		return true;
 	}
 	return false;
+	// можно сократить до return ($user->isAuth());
 }
 
 function isAdmin() {
@@ -17,6 +18,7 @@ function isAdmin() {
 		return true;
 	}
 	return false;
+	// можно сократить до return ($user->isAdmin());
 }
 
 function getNameAndLoginUser() {
