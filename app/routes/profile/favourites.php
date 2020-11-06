@@ -7,7 +7,7 @@ $userId = $_SESSION['user']['user_id'];
 $books = $b->getBooks();
 $favourite = new Favourites;
 ?>
-<div class="d-flex flex-wrap justify-content-between">
+<div class="d-flex flex-wrap justify-content-start">
     <?php  foreach($books as $book):
     if($favourite->doesTheBookExistInFavourite($book['book_id'], $userId)):
     	include($_SERVER['DOCUMENT_ROOT'] . '/templates/components/favourite_card.php');
