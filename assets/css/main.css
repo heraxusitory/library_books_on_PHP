@@ -61,3 +61,17 @@ a.custom-link:hover {
     color:white;
     text-align: center;
 }
+#content {
+    min-height: 200px;
+    width: 100%;
+}
+#content .loader {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+#content .loader>img.img-loader{
+    height: 40px;
+    width: 40px;
+    margin-top: auto;
+}
