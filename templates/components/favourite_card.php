@@ -6,7 +6,7 @@
             <div> <?= $book['author_name']; ?> </div>
         </p>
        	<div class='btn_clc'>
-	        <a href="/?book=<?= $book['book_id'] ?>" class="btn btn-primary">Show</a>
+	        <a href="/?page=book&id=<?= $book['book_id'] ?>" class="btn btn-primary">Show</a>
 	        <form method="POST" action="app/handlers/handler.php" class="form_favourite_remove">
 	        	 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
 	             <input type="hidden" name="action" value="remove">

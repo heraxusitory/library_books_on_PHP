@@ -22,6 +22,12 @@ function reloadPage(evt) {
 		case 'authors':
 			data.page = 'authors';
 		break;
+		case 'favourites':
+			data.page = 'favourites';
+		break;
+		case 'profile':
+			data.page = 'profile';
+		break;
 		case 'genres':
 			data.page = 'genres';
 		break;
@@ -68,6 +74,9 @@ function loadPage() {
 		case 'authors':
 			data.page = 'authors';
 		break;
+		case 'favourites':
+			data.page = 'favourites';
+		break;
 		case 'genres':
 			data.page = 'genres';
 		break;
@@ -93,14 +102,10 @@ function loadPage() {
 
 }
 
-
-
-
 $(document).ready(function() {
 
 	loadPage();
 
 	// console.log("Загрузка страницы завершилась")
-	$('.target').on('click', reloadPage); 
-
+	$('.target').on('click', reloadPage);
 });

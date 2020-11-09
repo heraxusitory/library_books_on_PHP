@@ -4,6 +4,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
 use App\Books;
 use App\Authors;
 use App\Genre;
+use App\Favourites;
 
 if ($_REQUEST['page'] === '/') {
 	$b = new Books();
@@ -163,4 +164,18 @@ if ($_REQUEST['page'] === 'genre') {
 
 		echo json_encode($arResponse);
 	 }
+}
+
+if ($_REQUEST['page'] === 'favourites') {
+	$b = new Books();
+	$favourite = new Favourites;
+	$userId = $_SESSION['user']['user_id'];
+	$books = $b->getBooks();
+	ob_start();
+	include($_SERVER['DOCUMENT_ROOT'] . '/templates/favourites/list.php');
+	$html = ob_get_clean();
+
+	$arResponse['html'] = $html;
+
+	echo json_encode($arResponse);
 }

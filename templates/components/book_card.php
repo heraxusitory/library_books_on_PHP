@@ -5,13 +5,24 @@
         <p class="card-text">
             <div> <?= $book['author_name']; ?> </div>
         </p>
-        <div class="btn_clc">
+        <div class="btn_clc d-flex flex-wrap">
             <a href="/?page=book&id=<?= $book['book_id'] ?>" class="btn btn-primary target">Show</a>
             <form method="POST" action="app/handlers/handler.php" class="<?= doesExistFavourite($book['book_id'], $userId)?'form_favourite_remove':'form_favourite_add'?>">
             	 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
                  <input type="hidden" name="action" value="<?= doesExistFavourite($book['book_id'], $userId)?'remove':'add'?>">
             	 <button class="btn btn-primary <?= doesExistFavourite($book['book_id'], $userId)?'remove-favourite':'add-favourite'?>"><?= doesExistFavourite($book['book_id'], $userId)?'Delete from favourites':'Add to favourites'?></button>
             </form>
+
+            <form method="POST" action="app/handlers/removeHandler.php">
+                 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
+                 <button class="btn btn-primary">Drop</button>
+            </form>
+
+            <form method="POST" action="app/handlers/editHandler.php">
+                 <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
+                 <button class="btn btn-primary">Edit</button>
+            </form>
+
         </div>
         <div class='fatal-error-favourite'></div>
     </div>
