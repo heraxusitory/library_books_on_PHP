@@ -1,3 +1,14 @@
+function backReloadPage(evt) {
+	console.log('click');
+	evt.preventDefault();
+	history.go(-1);
+	// console.log(history.go(-1))
+	let queryString = window.location.search;
+	// console.log(queryString);
+	loadPage();
+
+}
+
 function reloadPage(evt) {
 	console.log('клик');
 	evt.preventDefault();
@@ -56,6 +67,7 @@ function reloadPage(evt) {
 function loadPage() {
 
 	let queryString = window.location.search;
+	console.log(queryString)
 	//внутри скобок queryString не нужен 
 	const urlParams = new URLSearchParams(queryString);
 	let data = {
@@ -96,16 +108,18 @@ function loadPage() {
 			data.page = '404'; 
 		break;
 	}
-	console.log(data.page, data.id	)
 
 	helpers.getPage(data);
-
+	
 }
 
-$(document).ready(function() {
 
+
+$(document).ready(function() {
 	loadPage();
 
 	// console.log("Загрузка страницы завершилась")
 	$('.target').on('click', reloadPage);
+	// $('.back').on('click', backReloadPage);
+	// $('.step-back').on('click', backReloadPage);
 });

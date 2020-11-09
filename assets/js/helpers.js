@@ -23,6 +23,7 @@ const helpers = {
 				content.find('.form_favourite_remove').submit(removeToFavouriteBook);
 				content.find('#form_auth').submit(authRequest);
 				content.find('.target').on('click', reloadPage);
+				content.find('.back').on('click', backReloadPage);
 				// console.log('Аякс запрос завершился')
 			},
 			error: function(error) {
