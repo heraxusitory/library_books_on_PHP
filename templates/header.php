@@ -21,14 +21,14 @@ require($_SERVER['DOCUMENT_ROOT'] . '/app/init.php');
         <div class="container"> 
             <h1 class="header-title">Library Books</h1>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link custom-link" href="/">Books</a></li>
-                <li class="nav-item"><a class="nav-link custom-link" href="?authors=show">Authors</a></li>
-                <li class="nav-item"><a class="nav-link custom-link" href="?genres=show">Genre</a></li>
+                <li class="nav-item"><a class="nav-link custom-link target" href="/">Books</a></li>
+                <li class="nav-item"><a class="nav-link custom-link target" href="?page=authors">Authors</a></li>
+                <li class="nav-item"><a class="nav-link custom-link target" href="?page=genres">Genre</a></li>
                 <?php if (isAuth()):?>
-                    <li class="nav-item"><a class="nav-link custom-link" href="?profile=show">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign out</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link target" href="?page=profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link custom-link target" href="?page=auth">Sign out</a></li>
                 <?php else:?>
-                     <li class="nav-item"><a class="nav-link custom-link" href="?auth=yes">Sign in</a></li>
+                     <li class="nav-item"><a class="nav-link custom-link target" href="?page=auth">Sign in</a></li>
                 <?php endif;?>
             </ul>
         </div>
