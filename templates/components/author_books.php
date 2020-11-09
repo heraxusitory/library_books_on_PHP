@@ -5,6 +5,6 @@
         <p class="card-text">
             <div> <?= $book['genre_name']; ?> </div>
         </p>
-         <a href="/?book=<?= $book['book_id'] ?>" class="btn btn-primary">Show</a>
+         <a href="/?page=book&id=<?= $book['book_id'] ?>" class="btn btn-primary target">Show</a>
     </div>
 </div>
