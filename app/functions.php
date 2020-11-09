@@ -27,22 +27,22 @@ function getNameAndLoginUser() {
 	return $nameAndLogin;
 
 }
-
+//Для работы с AJAX $_GET['genre'] заменен на $_GET['id']
 function checkExistGenre($idOfGenre) {
 	foreach ($idOfGenre as $element) {
 		$isExist = false;
-		if ($element['id'] === $_GET['genre']) {
+		if ($element['id'] === $_GET['id']) {
 			$isExist = true;
 			break;
 		} 
 	}
 return $isExist;
 }
-
+//Для работы с AJAX $_GET['author'] заменен на $_GET['id']
 function checkExistAuthor($idOfAuthor) {
 	foreach ($idOfAuthor as $element) {
 		$isExist = false;
-		if ($element['id'] === $_GET['author']) {
+		if ($element['id'] === $_GET['id']) {
 			$isExist = true;
 			break;
 		} 
@@ -50,10 +50,11 @@ function checkExistAuthor($idOfAuthor) {
 return $isExist;
 }
 
+//Для работы с AJAX $_GET['book'] заменен на $_GET['id']
 function checkExistBook($idOfBook) {
 	foreach ($idOfBook as $element) {
 		$isExist = false;
-		if ($element['id'] === $_GET['book']) {
+		if ($element['id'] === $_GET['id']) {
 			$isExist = true;
 			break;
 		} 
