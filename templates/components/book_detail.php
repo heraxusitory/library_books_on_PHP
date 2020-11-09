@@ -1,5 +1,5 @@
 <div>
-    <a class="" href="/">Back to main page</a>
+    <a class="target" href="/">Back to main page</a>
 </div>
 <div class="row">
     <div class="col-sm-3">
